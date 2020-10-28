@@ -1,0 +1,18 @@
+{
+  "name": "wa-verify",
+  "version": "1.0.0",
+  "description": "Check if a phone number has an associated Whatsapp account",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "login": "node src/login",
+    "check": "node src/check"
+  },
+  "keywords": [],
+  "author": "Abhishek Biswal",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "puppeteer": "^5.4.1"
+  }
+}
