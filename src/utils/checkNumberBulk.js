@@ -2,13 +2,16 @@ const puppeteer = require("puppeteer");
 
 async function checkNumberBulk(phoneNumbers) {
 	const browser = await puppeteer.launch({
-		headless: false,
+		headless: true,
 		userDataDir: "./profileData",
 	});
 	const results = [];
 	for (let i in phoneNumbers) {
 		const phoneNumber = phoneNumbers[i];
 		const page = await browser.newPage();
+		await page.setUserAgent(
+			"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+		); // To Make sure Mobile version of Whatsapp Web doesn't load, fixes headless issue
 		await page.goto(
 			`https://web.whatsapp.com/send?phone=${phoneNumber}&text&app_absent=0`,
 			{ waitUntil: "networkidle0" }
