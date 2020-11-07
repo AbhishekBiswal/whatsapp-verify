@@ -6,13 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "login": "node src/login",
-    "check": "node src/check"
+    "check": "node src/check",
+    "server": "node src/server"
   },
   "keywords": [],
   "author": "Abhishek Biswal",
   "license": "ISC",
   "dependencies": {
     "chalk": "^4.1.0",
+    "express": "^4.17.1",
     "puppeteer": "^5.4.1"
   }
 }
