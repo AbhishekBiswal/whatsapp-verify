@@ -12,6 +12,7 @@ async function checkNumberBulk(phoneNumbers) {
 		await page.setUserAgent(
 			"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
 		); // To Make sure Mobile version of Whatsapp Web doesn't load, fixes headless issue
+		await page.setDefaultNavigationTimeout(0);
 		await page.goto(
 			`https://web.whatsapp.com/send?phone=${phoneNumber}&text&app_absent=0`,
 			{ waitUntil: "networkidle0" }
