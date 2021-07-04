@@ -1,5 +1,4 @@
 # WA-VERIFY
--
 
 ### What
 
@@ -34,3 +33,5 @@ npm run check 919898989898
 ```
 
 ***Note*** Phone Number format is (**Country Prefix without**)(Phone Number Digits)
+
+***Caution*** Using this method to verify numbers in bulk can result in the logged in number being banned by WhatsApp
